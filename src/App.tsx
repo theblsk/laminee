@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './App.css'
 
 const sections = [
@@ -18,6 +19,30 @@ const sections = [
     { id: 'cookies', name: 'Cookies', price: '3.00', portion: 'piece', description: 'Golden edges, a soft centre, and generous pockets of melted chocolate.' },
   ] },
 ]
+
+function MenuImage({ id, name }: { id: string; name: string }) {
+  const [status, setStatus] = useState<'loading' | 'loaded' | 'error'>('loading')
+
+  return (
+    <div className="item-art" aria-busy={status === 'loading'}>
+      {status === 'loading' && <span className="image-loader" role="status" aria-label={'Loading ' + name + ' illustration'} />}
+      {status === 'error' && <span className="image-error">Illustration unavailable</span>}
+      <img
+        ref={(image) => {
+          if (image?.complete) setStatus(image.naturalWidth > 0 ? 'loaded' : 'error')
+        }}
+        src={'/images/' + id + '.avif'}
+        alt={'Hand-drawn ' + name.toLowerCase()}
+        width="240"
+        height="200"
+        loading="lazy"
+        style={{ visibility: status === 'loaded' ? 'visible' : 'hidden' }}
+        onLoad={() => setStatus('loaded')}
+        onError={() => setStatus('error')}
+      />
+    </div>
+  )
+}
 
 function App() {
   return (
@@ -44,7 +69,7 @@ function App() {
             <div className="menu-grid">
               {section.items.map((item) => (
                 <article className="menu-item" key={item.id}>
-                  <div className="item-art"><img src={'/images/' + item.id + '.avif'} alt={'Hand-drawn ' + item.name.toLowerCase()} width="240" height="200" loading="lazy" /></div>
+                  <MenuImage id={item.id} name={item.name} />
                   <div className="item-copy"><div className="item-title"><h3>{item.name}</h3><span className="price"><span>$</span>{item.price}</span></div><p>{item.description}</p><span className="portion">per {item.portion}</span></div>
                 </article>
               ))}

@@ -1,4 +1,8 @@
 .item-art,.header-drawing{background:var(--paper)}
+.item-art{position:relative}
+.image-loader{position:absolute;width:26px;height:26px;border:2px solid #711b2c30;border-top-color:var(--ink);border-radius:50%;animation:image-spin .8s linear infinite}
+.image-error{position:absolute;font:700 20px var(--hand)}
+@keyframes image-spin{to{transform:rotate(360deg)}}
 .menu-item{background:var(--paper)}
 .skip-link{position:fixed;top:-80px;left:16px;z-index:10;padding:12px;background:var(--paper)}.skip-link:focus{top:12px}
 .awning{height:30px;background:repeating-linear-gradient(90deg,var(--ink) 0 28px,var(--paper) 28px 56px);border-bottom:2px solid var(--ink)}
