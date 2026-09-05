@@ -1,0 +1,5 @@
+@font-face{font-family:Caveat;src:url('/fonts/caveat.ttf') format('truetype');font-weight:700;font-display:swap}
+@font-face{font-family:'DM Sans';src:url('/fonts/dm-sans.ttf') format('truetype');font-weight:400;font-display:swap}
+:root{font-family:'DM Sans',sans-serif;color:#711b2c;background:#fbf5e9;font-synthesis:none;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;font-weight:400;--ink:#711b2c;--paper:#fbf5e9;--hand:Caveat,'Segoe Print',cursive}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;min-width:320px}a{color:inherit}a{-webkit-tap-highlight-color:transparent}a:focus-visible{outline:2px dashed var(--ink);outline-offset:6px}h1,h2,h3,p{margin:0}::selection{color:var(--paper);background:var(--ink)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
