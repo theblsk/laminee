@@ -1,4 +1,4 @@
-Generated with the built-in imagegen tool. Final assets: public/images/<item>.png.
+Generated with the built-in imagegen tool, then converted to AVIF. Final assets: public/images/<item>.avif.
 
 ## sourdough
 

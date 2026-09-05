@@ -27,7 +27,7 @@ function App() {
       <header id="top" className="masthead">
         <span className="masthead-note">the good stuff,<br />all in one place.</span>
         <div className="menu-title"><span className="eyebrow">BOULANGERIE & PÂTISSERIE</span><h1>Le menu<span className="title-star" aria-hidden="true">✳</span></h1><span className="title-underline" aria-hidden="true" /></div>
-        <div className="header-drawing"><img src="/images/croissant.png" alt="" /><span>oh, là là!</span></div>
+        <div className="header-drawing"><img src="/images/croissant.avif" alt="" /><span>oh, là là!</span></div>
       </header>
       <nav className="category-nav" aria-label="Menu categories">
         <a href="#boulangerie">Boulangerie <span>01</span></a>
@@ -44,7 +44,7 @@ function App() {
             <div className="menu-grid">
               {section.items.map((item) => (
                 <article className="menu-item" key={item.id}>
-                  <div className="item-art"><img src={'/images/' + item.id + '.png'} alt={'Hand-drawn ' + item.name.toLowerCase()} width="240" height="200" loading="lazy" /></div>
+                  <div className="item-art"><img src={'/images/' + item.id + '.avif'} alt={'Hand-drawn ' + item.name.toLowerCase()} width="240" height="200" loading="lazy" /></div>
                   <div className="item-copy"><div className="item-title"><h3>{item.name}</h3><span className="price"><span>$</span>{item.price}</span></div><p>{item.description}</p><span className="portion">per {item.portion}</span></div>
                 </article>
               ))}
