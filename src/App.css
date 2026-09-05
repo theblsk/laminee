@@ -13,3 +13,13 @@ footer{max-width:1060px;border-top:1px solid var(--ink);margin:0 auto;padding:28
 @media(min-width:1450px){.masthead{min-height:280px}.item-art,.item-art img{height:190px}.item-art img{width:230px}}
 @media(max-width:760px){.masthead{min-height:215px;padding:25px 24px}.masthead-note{font-size:21px;width:125px}.menu-title h1{font-size:86px}.eyebrow{font-size:8px;letter-spacing:1.7px}.header-drawing{width:125px}.header-drawing img{width:125px;height:105px}.title-star{font-size:28px;right:-20px}.menu-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 30px}.hand-note{font-size:20px;max-width:150px;text-align:right}footer{margin:0 30px;flex-wrap:wrap}footer p{order:3;width:100%;text-align:center}.section-heading h2{font-size:48px}}
 @media(max-width:480px){.awning{height:22px}.masthead{min-height:196px;padding:20px;justify-content:center}.masthead-note{position:absolute;left:20px;top:38px;font-size:17px;width:75px}.menu-title h1{font-size:87px;letter-spacing:-5px}.eyebrow{font-size:7px;letter-spacing:1.5px}.header-drawing{position:absolute;right:11px;top:93px;width:76px}.header-drawing img{width:76px;height:62px}.header-drawing span{font-size:16px;margin-top:-10px}.category-nav{gap:28px;padding:12px 16px}.category-nav a{font-size:23px}.category-nav a span{font-size:8px;margin-left:3px}.nav-star{font-size:13px}main{padding:0 21px}.menu-section{padding-top:34px;padding-bottom:22px}.section-heading{margin-bottom:14px}.section-heading>div{padding-left:24px}.section-number{font-size:9px;top:12px}.section-heading h2{font-size:42px}.section-heading p{font-size:8px;letter-spacing:.9px}.hand-note{font-size:18px;max-width:105px;padding-right:0}.menu-grid{column-gap:22px}.item-art,.item-art img{height:133px}.item-art img{width:145px;max-width:100%}.item-title{gap:4px;flex-wrap:wrap;min-height:62px;align-content:start}.item-title h3{font-size:27px}.price{font-size:22px}.item-copy p{font-size:11px;line-height:1.55}.menu-aside{padding:15px 0}.menu-aside>span:first-child{font-size:29px}.aside-star{font-size:28px}footer{margin:0 21px;padding:23px 0;gap:15px}footer .footer-note{font-size:25px}footer a{font-size:20px}}
+@media(max-width:600px){
+  .masthead{display:grid;grid-template-columns:1fr 1fr;gap:12px 20px;padding:24px 28px 18px}
+  .menu-title{grid-column:1 / -1;grid-row:1;justify-self:center}
+  .menu-title h1{font-size:clamp(72px,20vw,87px)}
+  .masthead-note,.header-drawing{position:relative;inset:auto;grid-row:2;width:auto}
+  .masthead-note{font-size:19px;justify-self:start}
+  .header-drawing{justify-self:end;width:76px}
+  .header-drawing img{width:76px;height:62px}
+  .header-drawing span{font-size:16px;margin-top:-10px}
+}
