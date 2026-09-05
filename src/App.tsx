@@ -51,12 +51,12 @@ function App() {
       <div className="awning" aria-hidden="true" />
       <header id="top" className="masthead">
         <span className="masthead-note">the good stuff,<br />all in one place.</span>
-        <div className="menu-title"><span className="eyebrow">BOULANGERIE & PÂTISSERIE</span><h1>Le menu<span className="title-star" aria-hidden="true">✳</span></h1><span className="title-underline" aria-hidden="true" /></div>
+        <div className="menu-title"><span className="eyebrow">BOULANGERIE & PÂTISSERIE</span><h1>Le menu<span className="title-star" aria-hidden="true"><img src="/asterisk.svg" alt="" /></span></h1><span className="title-underline" aria-hidden="true" /></div>
         <div className="header-drawing"><img src="/images/croissant.avif" alt="" /><span>oh, là là!</span></div>
       </header>
       <nav className="category-nav" aria-label="Menu categories">
         <a href="#boulangerie">Boulangerie <span>01</span></a>
-        <span className="nav-star" aria-hidden="true">✳</span>
+        <span className="nav-star" aria-hidden="true"><img src="/asterisk.svg" alt="" /></span>
         <a href="#patisserie">Pâtisserie <span>02</span></a>
       </nav>
       <main id="menu">
@@ -73,7 +73,7 @@ function App() {
                   <div className="item-copy"><div className="item-title"><h3>{item.name}</h3><span className="price"><span>$</span>{item.price}</span></div><p>{item.description}</p><span className="portion">per {item.portion}</span></div>
                 </article>
               ))}
-              {sectionIndex === 0 && <div className="menu-aside" aria-hidden="true"><span>Good things<br />take dough.</span><span className="aside-star">✳</span></div>}
+              {sectionIndex === 0 && <div className="menu-aside" aria-hidden="true"><span>Good things<br />take dough.</span><span className="aside-star"><img src="/asterisk.svg" alt="" /></span></div>}
             </div>
           </section>
         ))}

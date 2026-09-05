@@ -1,4 +1,5 @@
 .item-art,.header-drawing{background:var(--paper)}
+.title-star img,.nav-star img,.aside-star img{display:block;width:1em;height:1em}
 .item-art{position:relative}
 .image-loader{position:absolute;width:26px;height:26px;border:2px solid #711b2c30;border-top-color:var(--ink);border-radius:50%;animation:image-spin .8s linear infinite}
 .image-error{position:absolute;font:700 20px var(--hand)}
